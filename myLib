@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class MyLib {
+    
+    public int area(int intArea) {
+        int areaOfInt = (int) Math.PI * intArea;
+        return areaOfInt;
+    }
+    public double area(double doubleArea) {
+        double areaOfDouble = Math.PI * doubleArea;
+        return areaOfDouble;
+    }
+    public int area(int elipVar, int elipVar2) {
+       
+       int areaOfElipint = (int) (elipVar * elipVar2 * Math.PI);
+       return areaOfElipint;
+    }
+    public double area(double dblElip, double dblElip2) {
+        double areaOfElipDbl = dblElip * dblElip2 * Math.PI;
+        return areaOfElipDbl;
+    }      
+}
