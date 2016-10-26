@@ -1,0 +1,58 @@
+import java.util.Scanner;
+class Main {
+    public static void main (String[] args) {
+     Scanner input = new Scanner(System.in);
+     int radius, radius2, userChoice;
+    double radiusDouble,radiusDouble2;
+    MyLib Area = new MyLib();
+    boolean exit = false;
+    while (exit != true) {
+    System.out.println("==================================");
+    System.out.println("1- Calculate the area of the Circle with integer Radius");
+    System.out.println("2- Calculate the area of the Circle with double Radius");
+    System.out.println("3- Calculate the area of the Ellipse with integer Radius"); 
+    System.out.println("4- Calculate the area of the Ellipse with double Radius");
+    System.out.println("5- Exit");
+    System.out.print("Enter your choice: ");
+        userChoice = input.nextInt();
+        switch (userChoice) {
+            case 1: {
+                System.out.println("Enter the radius: ");
+                radius = input.nextInt();
+                System.out.println(Area.area(radius));
+                break;
+            }
+            case 2: {
+                System.out.println("Enter the radius: ");
+                radiusDouble = input.nextDouble();
+                System.out.println(Area.area(radiusDouble));
+                break;
+            } 
+            case 3: {
+                System.out.println("Enter the first radius of the Elipse: ");
+                radius = input.nextInt();
+                System.out.println("Enter the second radius of the Elipse: ");
+                radius2 = input.nextInt();
+                System.out.println(Area.area(radius, radius2));
+                break;  
+            }
+            case 4: {
+                System.out.println("Enter the first radius of the Elipse: ");
+                radiusDouble = input.nextDouble();
+                System.out.println("Enter the first radius of the Elipse: ");
+                radiusDouble2 = input.nextDouble();
+                System.out.println(Area.area(radiusDouble,radiusDouble2));
+                break;
+            }
+            case 5: {
+                exit = true;
+                break;
+            }
+            default : {
+                break;
+            }
+            
+        }
+    }
+    } 
+}
